@@ -1,0 +1,145 @@
+{
+  "channels": [
+    {
+      "name": "engineering",
+      "threads": [
+        {
+          "id": "thread-eng-001",
+          "messages": [
+            {
+              "author": "Sarah Miller",
+              "text": "Brainstorming the API rate limits for the v2 release. Thinking 1000 req/min?",
+              "timestamp": "2026-01-12T09:00:00Z",
+              "permalink": "https://slack.com/eng/p10001"
+            },
+            {
+              "author": "Mark Thompson",
+              "text": "1000 seems high for our current DB capacity. Can we start at 500?",
+              "timestamp": "2026-01-12T09:15:00Z",
+              "permalink": "https://slack.com/eng/p10002"
+            },
+            {
+              "author": "Sarah Miller",
+              "text": "DECISION: We will set the v2 rate limit to 500 requests per minute for the initial launch.",
+              "timestamp": "2026-01-12T10:30:00Z",
+              "permalink": "https://slack.com/eng/p10003"
+            }
+          ]
+        },
+        {
+          "id": "thread-eng-002",
+          "messages": [
+            {
+              "author": "James Wilson",
+              "text": "The legacy auth service is failing under load. Total mess in there.",
+              "timestamp": "2026-01-13T14:20:00Z",
+              "permalink": "https://slack.com/eng/p20001"
+            },
+            {
+              "author": "Linda Garcia",
+              "text": "Agreed. Let's keep this internal, but we're basically patching it hourly until the migration.",
+              "timestamp": "2026-01-13T14:25:00Z",
+              "permalink": "https://slack.com/eng/p20002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "product-updates",
+      "threads": [
+        {
+          "id": "thread-prod-001",
+          "messages": [
+            {
+              "author": "Robert Chen",
+              "text": "When is the 'Dark Mode' feature shipping?",
+              "timestamp": "2026-01-10T11:00:00Z",
+              "permalink": "https://slack.com/prod/p30001"
+            },
+            {
+              "author": "Emily Davis",
+              "text": "Current roadmap says Q1 release.",
+              "timestamp": "2026-01-10T11:05:00Z",
+              "permalink": "https://slack.com/prod/p30002"
+            },
+            {
+              "author": "Emily Davis",
+              "text": "UPDATE: Design just pushed back. Moving 'Dark Mode' to Q2 for extra polish.",
+              "timestamp": "2026-01-14T08:00:00Z",
+              "permalink": "https://slack.com/prod/p30003"
+            }
+          ]
+        },
+        {
+          "id": "thread-prod-002",
+          "messages": [
+            {
+              "author": "Michael Brown",
+              "text": "What is the official policy on data retention for free-tier users?",
+              "timestamp": "2026-01-11T12:00:00Z",
+              "permalink": "https://slack.com/prod/p40001"
+            },
+            {
+              "author": "Jessica Taylor",
+              "text": "It is 30 days after account deactivation.",
+              "timestamp": "2026-01-11T12:30:00Z",
+              "permalink": "https://slack.com/prod/p40002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "support",
+      "threads": [
+        {
+          "id": "thread-supp-001",
+          "messages": [
+            {
+              "author": "William Clark",
+              "text": "Customer reporting 404s on the /settings/profile page.",
+              "timestamp": "2026-01-14T09:00:00Z",
+              "permalink": "https://slack.com/supp/p50001"
+            },
+            {
+              "author": "Karen White",
+              "text": "Looking into it. Looks like a routing bug in the frontend.",
+              "timestamp": "2026-01-14T09:10:00Z",
+              "permalink": "https://slack.com/supp/p50002"
+            },
+            {
+              "author": "Karen White",
+              "text": "FIXED: Hotfix deployed at 09:45. Customers may need to refresh their browsers.",
+              "timestamp": "2026-01-14T09:50:00Z",
+              "permalink": "https://slack.com/supp/p50003"
+            }
+          ]
+        },
+        {
+          "id": "thread-supp-002",
+          "messages": [
+            {
+              "author": "David Lewis",
+              "text": "Can we give User_123 a refund even though they are past the 14-day window?",
+              "timestamp": "2026-01-13T16:00:00Z",
+              "permalink": "https://slack.com/supp/p60001"
+            },
+            {
+              "author": "Susan Walker",
+              "text": "The policy says no, but they are a high-value lead for sales.",
+              "timestamp": "2026-01-13T16:05:00Z",
+              "permalink": "https://slack.com/supp/p60002"
+            },
+            {
+              "author": "Susan Walker",
+              "text": "Let's make an exception this once, but don't document this as a change in general policy.",
+              "timestamp": "2026-01-13T16:15:00Z",
+              "permalink": "https://slack.com/supp/p60003"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
