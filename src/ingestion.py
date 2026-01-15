@@ -35,6 +35,3 @@ def ingest(json_path):
                 )
             )
     return threads
-
-jsonfile = os.path.join('data', 'mock_slack.json')
-ingest(jsonfile)
