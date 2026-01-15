@@ -37,7 +37,7 @@ def classifier(chunk: Chunk):
     contents=prompt,
     config=types.GenerateContentConfig(
             response_mime_type="application/json",
-    ),
+        ),
     )
     raw_text = response.text.strip()
 
