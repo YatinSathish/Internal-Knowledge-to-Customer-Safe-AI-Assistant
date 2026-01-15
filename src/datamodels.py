@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 @dataclass
 class SlackMessage:
@@ -24,3 +24,8 @@ class Chunk:
     channel: str
     message_permalinks: List[str]
     metadata: Dict = field(default_factory=dict)
+    # output derived from classifier
+    knowledge_worthy: Optional[bool] = None
+    source_of_truth: Optional[bool] = None
+    customer_safe: Optional[bool] = None
+    classification_reason: Optional[str] = None
