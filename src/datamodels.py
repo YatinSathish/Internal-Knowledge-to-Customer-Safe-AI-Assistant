@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 from typing import List, Dict, Optional
 
 @dataclass
@@ -29,3 +29,10 @@ class Chunk:
     source_of_truth: Optional[bool] = None
     customer_safe: Optional[bool] = None
     classification_reason: Optional[str] = None
+
+    def to_dict(self):
+        return asdict(self)
+
+    @staticmethod
+    def from_dict(d):
+        return Chunk(**d)

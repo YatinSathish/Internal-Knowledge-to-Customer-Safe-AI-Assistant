@@ -33,6 +33,7 @@ def classifier(chunk: Chunk):
                 - reason (short explanation)
             """
     response = client.models.generate_content(
+    # model="gemini-2.5-flash-lite", 
     model="gemini-2.5-flash", 
     contents=prompt,
     config=types.GenerateContentConfig(
@@ -51,7 +52,7 @@ def classifier(chunk: Chunk):
     chunk.source_of_truth = result["source_of_truth"]
     chunk.customer_safe = result["customer_safe"]
     chunk.classification_reason = result["reason"]
-
+    
     return chunk
 
 def classify_chunks(chunks):
@@ -59,3 +60,12 @@ def classify_chunks(chunks):
     for chunk in chunks:
         classified.append(classifier(chunk))
     return classified
+
+def save_chunks(chunks, path):
+    with open(path, "w") as f:
+        json.dump([c.to_dict() for c in chunks], f, indent=2)
+
+def load_chunks(path):
+    with open(path, "r") as f:
+        data = json.load(f)
+    return [Chunk.from_dict(d) for d in data]

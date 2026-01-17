@@ -1,5 +1,4 @@
 from datamodels import SlackThread, Chunk
-from ingestion import ingest
 
 def chunk_threads(threads):
     chunks = []
@@ -29,7 +28,3 @@ def chunk_threads(threads):
         chunks.append(chunk)
 
     return chunks
-
-threads = ingest("data/mock_slack.json")
-chunks = chunk_threads(threads)
-print(chunks[0])
