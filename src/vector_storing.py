@@ -17,27 +17,10 @@ def embed_text(text: str) -> List[float]:
         model="models/text-embedding-004",
         contents=text,
     )
-    # print(response)
     return response.embeddings[0].values
 
 
-# def get_chroma_collection():
-#     chroma_client = chromadb.PersistentClient(
-#         settings=chromadb.Settings(
-#             persist_directory="./chroma_db",
-#             anonymized_telemetry=False,
-#         )
-#     )
-
-#     collection = chroma_client.get_or_create_collection(
-#         name="knowledge_chunks"
-#     )
-
-#     return collection
-
-
 def index_chunks(chunks: List[Chunk]):
-    # collection = get_chroma_collection()
     collection = chroma_client.get_or_create_collection(name="knowledge_chunks")
     for chunk in chunks:
         if not chunk.knowledge_worthy:
@@ -45,19 +28,6 @@ def index_chunks(chunks: List[Chunk]):
 
         embedding = embed_text(chunk.text)
 
-        # collection.add(
-        #     ids=[chunk.chunk_id],
-        #     documents=[chunk.text],
-        #     embeddings=[embedding],
-        #     metadatas=[{
-        #         "chunk_id": chunk.chunk_id,
-        #         "channel": chunk.channel,
-        #         "thread_id": chunk.thread_id,
-        #         "source_of_truth": chunk.source_of_truth,
-        #         "customer_safe": chunk.customer_safe,
-        #         "source": "slack",
-        #     }]
-        # )
         collection.upsert(
             ids=[chunk.chunk_id],
             documents=[chunk.text],
