@@ -1,0 +1,114 @@
+[
+  {
+    "chunk_id": "engineering-thread-eng-001",
+    "text": "Sarah Miller: Brainstorming the API rate limits for the v2 release. Thinking 1000 req/min?\nMark Thompson: 1000 seems high for our current DB capacity. Can we start at 500?\nSarah Miller: DECISION: We will set the v2 rate limit to 500 requests per minute for the initial launch.",
+    "thread_id": "thread-eng-001",
+    "channel": "engineering",
+    "message_permalinks": [
+      "https://slack.com/eng/p10001",
+      "https://slack.com/eng/p10002",
+      "https://slack.com/eng/p10003"
+    ],
+    "metadata": {
+      "source": "slack",
+      "channel": "engineering"
+    },
+    "knowledge_worthy": true,
+    "source_of_truth": true,
+    "customer_safe": false,
+    "classification_reason": "The conversation contains a final decision on API rate limits, which is knowledge-worthy and a source of truth. However, the discussion regarding current DB capacity is an internal detail that should not be shared with customers."
+  },
+  {
+    "chunk_id": "engineering-thread-eng-002",
+    "text": "James Wilson: The legacy auth service is failing under load. Total mess in there.\nLinda Garcia: Agreed. Let's keep this internal, but we're basically patching it hourly until the migration.",
+    "thread_id": "thread-eng-002",
+    "channel": "engineering",
+    "message_permalinks": [
+      "https://slack.com/eng/p20001",
+      "https://slack.com/eng/p20002"
+    ],
+    "metadata": {
+      "source": "slack",
+      "channel": "engineering"
+    },
+    "knowledge_worthy": true,
+    "source_of_truth": false,
+    "customer_safe": false,
+    "classification_reason": "Describes a confirmed, ongoing problem and an interim workaround, which is useful knowledge. However, it explicitly states to keep the information internal and discusses critical service instability, making it not customer-safe or a final resolution."
+  },
+  {
+    "chunk_id": "product-updates-thread-prod-001",
+    "text": "Robert Chen: When is the 'Dark Mode' feature shipping?\nEmily Davis: Current roadmap says Q1 release.\nEmily Davis: UPDATE: Design just pushed back. Moving 'Dark Mode' to Q2 for extra polish.",
+    "thread_id": "thread-prod-001",
+    "channel": "product-updates",
+    "message_permalinks": [
+      "https://slack.com/prod/p30001",
+      "https://slack.com/prod/p30002",
+      "https://slack.com/prod/p30003"
+    ],
+    "metadata": {
+      "source": "slack",
+      "channel": "product-updates"
+    },
+    "knowledge_worthy": true,
+    "source_of_truth": true,
+    "customer_safe": true,
+    "classification_reason": "Contains a definitive update on a feature release schedule, replacing prior information, and is suitable for customers."
+  },
+  {
+    "chunk_id": "product-updates-thread-prod-002",
+    "text": "Michael Brown: What is the official policy on data retention for free-tier users?\nJessica Taylor: It is 30 days after account deactivation.",
+    "thread_id": "thread-prod-002",
+    "channel": "product-updates",
+    "message_permalinks": [
+      "https://slack.com/prod/p40001",
+      "https://slack.com/prod/p40002"
+    ],
+    "metadata": {
+      "source": "slack",
+      "channel": "product-updates"
+    },
+    "knowledge_worthy": true,
+    "source_of_truth": true,
+    "customer_safe": true,
+    "classification_reason": "This conversation provides a direct answer to an official policy question, making it factual, authoritative, and safe for external sharing."
+  },
+  {
+    "chunk_id": "support-thread-supp-001",
+    "text": "William Clark: Customer reporting 404s on the /settings/profile page.\nKaren White: Looking into it. Looks like a routing bug in the frontend.\nKaren White: FIXED: Hotfix deployed at 09:45. Customers may need to refresh their browsers.",
+    "thread_id": "thread-supp-001",
+    "channel": "support",
+    "message_permalinks": [
+      "https://slack.com/supp/p50001",
+      "https://slack.com/supp/p50002",
+      "https://slack.com/supp/p50003"
+    ],
+    "metadata": {
+      "source": "slack",
+      "channel": "support"
+    },
+    "knowledge_worthy": true,
+    "source_of_truth": true,
+    "customer_safe": false,
+    "classification_reason": "The conversation contains a confirmed fix and resolution, making it knowledge worthy and a source of truth. However, it also includes internal diagnostics about a routing bug which is not suitable for direct customer sharing."
+  },
+  {
+    "chunk_id": "support-thread-supp-002",
+    "text": "David Lewis: Can we give User_123 a refund even though they are past the 14-day window?\nSusan Walker: The policy says no, but they are a high-value lead for sales.\nSusan Walker: Let's make an exception this once, but don't document this as a change in general policy.",
+    "thread_id": "thread-supp-002",
+    "channel": "support",
+    "message_permalinks": [
+      "https://slack.com/supp/p60001",
+      "https://slack.com/supp/p60002",
+      "https://slack.com/supp/p60003"
+    ],
+    "metadata": {
+      "source": "slack",
+      "channel": "support"
+    },
+    "knowledge_worthy": true,
+    "source_of_truth": true,
+    "customer_safe": false,
+    "classification_reason": "An authoritative internal decision was made to make a policy exception based on customer value. While it provides internal knowledge of a decision, it reveals internal policy deviation and discretion, making it unsafe for customers."
+  }
+]
