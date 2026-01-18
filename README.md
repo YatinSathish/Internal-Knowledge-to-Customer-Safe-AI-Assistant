@@ -50,3 +50,8 @@ This is an RAG system that does the following:
 1. Currently, the system processes static JSON files. In the future, we can implement a workflow to automatically classify and index new messages as they are posted.
 
 2. UI for admin-side to review AI classified chunks which would allow humans to manually approve or edit Source of Truth and Customer Safe flags.
+
+## AI and Manual Validation:
+
+- **AI (Gemini 2.5 Flash):** Used for bulk classification of Slack data (Source of Truth/Customer Safe) and final answer generation with constraints to prevent repeated calls to the API.
+- **Manual Validation:** While the AI suggests what is "safe", the system uses code level metadata filters like `(where={"customer_safe": True})` to ensure that the internal data is physically inaccessible to the customer facing API regardless of the LLM's output. Also, the citations are manually checked to ensure internal Slack links never leak to external users.
