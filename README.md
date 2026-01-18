@@ -1,8 +1,8 @@
 # Internal-Knowledge-to-Customer-Safe-AI-Assistant
 
 This is an RAG system that does the following:
-    - Ingests internal Slack conversations.
-    - Classifies them using AI to find source of truth and customer safe data.
+- Ingests internal Slack conversations.
+- Classifies them using AI to find source of truth and customer safe data.
 
 ## Architecture Overview
 ![System Architecture Diagram](assets/architecture.png)
